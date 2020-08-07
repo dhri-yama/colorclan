@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+@font-face{
+    font-family: Rhesmanisa;
+    src: url("../fonts/Rhesmanisa\ Bold.otf");
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/homepage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #000;
+}
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color:#000;
+    position: sticky;
+    z-index: 20;
+    top: 0;
+}
+ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    width: 98%;
+    margin: auto;
+}
+li{
+    font-family:Lato,sans-serif ;
+    display: inline;
+    margin: 0 15px;
+}
+li:nth-child(1){
+    font-family: Rhesmanisa,'Poiret One';
+    font-size: 40px;
+}
+li:nth-child(2),li:nth-child(3){
+    float: right;
+    font-size: 25px;
+    font-family: 'Poiret One',sans-serif;
+    transform: translateY(10px);
+    font-weight: 400;
+}
+li:hover{
+    color: #ffc63e;
+}
+li a:hover{
+    color: #ffc63e;
+}
+
+li a:visited{
+    color: white;
+}
+h1{
+    color: white;
+    margin: 1rem 0rem 2.5rem 1rem;
+    font-family: 'Poiret One',sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    text-align: center;
+}
+.home_heading{
+    padding: 2rem;
+    position: relative;
+    top: 40%;
+    margin: auto;
+}
+.home_heading h1{
+    font-family: Rhesmanisa,'Poiret One';
+    font-size: 15rem;
+    margin: initial;
+}
+.home_heading p{
+    text-transform: uppercase;
+    font-family: lato;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    color: white;
+    text-align: center;
+}
+
+.main{
+    width: 100%;
+    padding: 2rem;
+    background-color:  #000000;
+    background-image: url("../images/fancy-pants.jpg");
+}
+
+.card_container{
+    display: grid;
+    grid-template-rows:1fr 1fr ;
+    grid-template-columns:  1fr 1fr 1fr;
+    width: 80%;
+    grid-gap: 8px;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+.card{
+    background-color: rgba(0,0,0, .2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    border-radius: 8px;
+    font-family: Lato,sans-serif;
+}
+ 
+.card:hover{
+    background-color: rgba(256, 256, 256, .1);
+    color:#ffc63e ;
+    transform: scale(1.03);
+    font-weight: 400;
+}
+
+.analogus::before{
+    content: "Analogus";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+.monochromatic::before{
+    content: "Monochromatic";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+.complementary::before{
+    content: "Complementary";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+.triadic::before{
+    content: "Triadic";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+.tetradic::before{
+    content: "Tetradic";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+.random::before{
+    content: "Random";
+    font-size: 2rem;
+    font-family: 'Poiret One',Lato,sans-serif;
+}
+
+#about{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+}
+#about p{
+    text-align: center;
+    color: #fff;
+    font-family:'Poiret One',Lato,sans-serif ;
+    font-size: 1.5rem;
+}
+.connect{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.connect img{
+    width: 40px;
+}
+
+@media(max-width:1100px){
+
+    .card_container{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:900px){
+    
+    .main{
+        padding: 1rem;
+    }
+}
+
+@media(max-width:800px){
+    
+    .card_container{
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .home_heading{
+        top: 45%;
+    }
+    .home_heading h1{
+        font-size: 12rem;
+    }
+    .home_heading p{
+        font-size: 1.2rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+}
+
+@media(max-width:500px){
+    h1{
+        font-size: 3rem;
+    }
+    .home_heading{
+        padding: 1rem;
+        top: 55%;
+    }
+    .home_heading h1{
+        font-size: 10rem;
+    }
+    .home_heading p{
+        font-size: 1.05rem;
+    }
+    .card_container{
+        grid-gap:10px ;
+    }
+    .card{
+        height: 10rem;
+    }
+
+    .main{
+        padding: 1rem;
+    }
+    .monochromatic::before ,.analogus::before,.complementary::before,.triadic::before,.tetradic::before,.random::before{
+        font-size: 1.5rem;
+    }
+}
